@@ -1,0 +1,88 @@
+
+/* background colors */
+footer {
+  background-color: var(--darkblue);
+  border-top: 10px solid #2f64a3;
+  color: white;
+}
+
+/* links are white */
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* links hover */
+footer a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer p {
+  line-height: 10px;
+}
+
+/* footer css grid */
+footer {
+margin: 0 20px;
+display: grid;
+grid-gap: 5px;
+}
+
+/* fall back */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+footer {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+  ". . l r r r r . . . . ."
+  ". . fc fc fc fc fc . . . . .";
+}
+
+.column-left {
+grid-area: l;
+padding-right: 100px;
+}
+
+.column-left ul{
+list-style: none;
+}
+
+.column-right {
+  grid-area: r;
+}
+
+.column-right ul {
+  list-style:none;
+}
+
+.footer_credit {
+  grid-area: fc;
+}
+
+/*
+  ======================================================
+      FOOTER RESPONSIVE
+
+  ======================================================
+*/
+@media only screen and (max-width: 478px) {
+  footer {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+    "l l l l l l l l l . . ."
+    "r r r r r r r r . . . ."
+    "fc fc fc fc fc fc fc fc fc fc fc fc";
+  }
+
+}

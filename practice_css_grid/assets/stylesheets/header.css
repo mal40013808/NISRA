@@ -1,0 +1,283 @@
+
+.header {
+  max-width: 950px;
+  margin: 0 20px;
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+
+.upper-header {
+  height: 160px;
+}
+
+/*
+=======================
+SEARCH BAR ABOVE 750PX
+=======================
+*/
+
+.top_right {
+  width: 50%;
+}
+
+input[type="text"]{
+  width: 200px;
+  height: 33px;
+  padding-right: 50px;
+  position: absolute; top: 45px; right: 290px;
+  float: right;
+}
+
+/* search icon */
+.input-icon{
+  position: absolute;
+  left: 0px;
+  top: calc(50% - 0.5em); /* Keep icon in center of input height, regardless of the input height */
+  color: pink;
+}
+
+.input-wrapper{
+/* centres to middle of page  */
+  margin: 0 auto;
+}
+
+/* search button */
+input[type="submit"] {
+/* height has to be the same as text input */
+  height: 33px;
+  width: 90px;
+  position: absolute; top: 45px; right: 220px;
+/* grey background */
+ background: #666;
+/* text colour is white */
+  color: white;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+/* removing blue border when text input is clicked, it is bad for accessibility but it is a copy of the original website */
+textarea:focus, input:focus{
+  outline: none;
+}
+
+
+/*
+======================================================
+      NAVIGATION BAR ABOVE 750PX
+======================================================
+*/
+
+* {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+
+
+@media only screen and (min-width: 767px) and (max-width: 2800px){
+.topnav {
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--lightblue);
+}
+
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-menu {
+display: grid;
+margin: 0 auto;
+grid-template-columns: repeat(12, 1fr);
+grid-auto-rows: minmax(50px, auto);
+grid-template-areas:
+". . m m m m m m m m . ."
+}
+
+.topnav ul {
+  list-style: none;
+  z-index: 9999;
+  display: inline-block;
+  background-color: var(--lightblue);
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* links */
+.topnav a {
+  color: white;
+  text-decoration: none;
+}
+
+.topnav ul li {
+ border-bottom: none;
+ text-align: center;
+ position: relative;
+ z-index: 9999;
+ cursor: pointer;
+ display: inline-block;
+ padding: 11px 20px;
+ align: center;
+ float: none;
+}
+
+/* active page link is medium blue */
+.topnav ul li.active-page {
+  background-color: var(--mediumblue);
+  }
+
+  /* sets the background colour on hover to medium blue */
+.topnav ul li:hover {
+  background-color: var(--mediumblue);
+}
+
+
+/* CSS GRID */
+
+ul {
+  grid-area: m;
+  }
+
+  .responsive {
+  display:none
+  }
+}
+/*
+======================================================
+     BURGER MENU
+======================================================
+*/
+
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+
+/* Style the navigation menu */
+.responsive {
+  overflow: hidden;
+  background-color: var(--lightblue);
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.responsive #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.responsive a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.responsive a.icon {
+  background: var(--lightblue);
+  display: block;
+/*   position: absolute; */
+  right: 0;
+  top: 0;
+  color: white;
+  float: left;
+}
+
+/* stays same color on mouse-over */
+.responsive a:hover {
+  background-color: var(--lightblue);
+  color: white;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: var(--lightblue);
+  color: white;
+  }
+
+
+/*
+======================================================
+      SEARCH BAR
+======================================================
+*/
+
+form.example {
+
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: right;
+  width: 60%;
+  background: #f1f1f1;
+  right: 100px;
+    top: 15px;
+}
+
+/* Style the submit button */
+form.example button {
+  float: right;
+  width: 10%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  right: 100px;
+    top: 15px;
+}
+
+/* on hover */
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
+
+  .topnav {
+    display: none;
+  }
+
+.search-header {
+  display: none;
+}
+
+}
+
+
+
+/* SECOND BREAKPOINT */
+@media only screen and (max-width: 480px) {
+  .logo img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+}
